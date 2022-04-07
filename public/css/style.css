@@ -4,6 +4,8 @@
 	--dark-blue: #0d28a6;
 	--light-blue: #f1f3ff;
 	--primary: #5cb85f;
+	--lime-green: #c9e7ca;
+	--neutral-04: #3c3c3c;
 }
 
 /* 
@@ -268,6 +270,93 @@ header {
 .accordion img {
 	width: 12px;
 	height: 6px;
+}
+
+.form-section {
+	margin-top: -60px;
+}
+.form-container {
+	max-width: 1047px;
+	position: relative;
+	background-color: #fff;
+	border-top-right-radius: 8px;
+}
+.form-container .form-row {
+	padding: 24px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+	border-radius: 8px;
+	margin-right: unset;
+	margin-left: unset;
+}
+.form-section label,
+.form-section option,
+.form-section select,
+.form-section ::placeholder {
+	font-size: 12px !important;
+	line-height: 18px !important;
+	color: var(--neutral-04) !important;
+}
+.form-section .input-group-text {
+	background-color: unset;
+	border-top-right-radius: 0.25rem !important;
+	border-bottom-right-radius: 0.25rem !important;
+	border-left: none;
+	/* border-radius: inherit !important; */
+}
+.form-section input,
+.form-section select {
+	height: 36px;
+}
+.form-section .form-group {
+	margin-bottom: 0;
+}
+.form-section .tanggal.form-control,
+.form-section .penumpang.form-control {
+	border-right: none;
+}
+
+.form-section button {
+	height: 36px;
+}
+.form-section #clear-btn {
+	height: 36px;
+	display: flex;
+	cursor: pointer;
+	display: none;
+}
+.form-section #clear-btn img {
+	padding: 2px;
+	border: 1px solid black;
+	border-radius: 50%;
+}
+
+.cars-container .container {
+	max-width: 1047px;
+}
+.cars-container .card {
+	background: #ffffff;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 8px;
+	padding: 31px 17px;
+	border: none;
+}
+.cars-container .card > img {
+	width: 270px;
+	height: 160px;
+}
+.cars-container .card-title,
+.cars-container .card-desc,
+.cars-container .card-info p {
+	font-size: 14px;
+	line-height: 20px;
+}
+.cars-container .card-harga {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 700;
+}
+.cars-container .main__button {
+	height: 48px;
 }
 
 .footer {
