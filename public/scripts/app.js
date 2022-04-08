@@ -37,7 +37,7 @@ class App {
 				!this.check.firstElementChild
 					? (this.notFoundText.style.display = "block")
 					: (this.notFoundText.style.display = "none");
-					
+
 				this.click = true;
 				this.clearButton.style.display = "flex";
 			} else {
@@ -75,6 +75,7 @@ class App {
 				 * console.info(
 					`${car.manufacture}-${car.model}\ninputDate: ${inputDateTime}\ncarDate: ${carDate} \navailable: ${car.available}`);
 				 */
+				console.info(`${car.manufacture}-${car.model}\ninputDate: ${inputDateTime}\ncarDate: ${carDate} \navailable: ${car.available}`);
 			}
 		});
 	};
