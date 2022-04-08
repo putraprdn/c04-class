@@ -358,6 +358,10 @@ header {
 .cars-container .main__button {
 	height: 48px;
 }
+.cars-container #not-found {
+	display: none;
+}
+
 
 .footer {
 	margin-top: 150px;

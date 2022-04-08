@@ -44,7 +44,7 @@ class Car {
     const newRentPerDay = this.rentPerDay >= 1000000 ? `${this.rentPerDay / 1000000}.000.000` : `${this.rentPerDay / 1000}.000`;
     return `
         <div class="card">
-            <img src="${this.image}" class="card-img-top" alt="Car Image">
+            <img src="${this.image}" class="card-img" alt="Car Image">
             <div class="card-body p-0">
                 <h5 class="card-title mt-3 mb-1">${this.manufacture} - ${this.model}</h5>
                 <p class="card-harga mb-1">Rp. ${newRentPerDay} / hari</p>

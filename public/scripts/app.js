@@ -10,6 +10,8 @@ class App {
 		this.getJam = document.getElementById("jam");
 		this.getPenumpang = document.getElementById("penumpang");
 		this.check = document.querySelector(".cars-container .row");
+		this.notFoundText = document.getElementById("not-found");
+		this.formElement = document.getElementById("form");
 		this.click = false;
 	}
 
@@ -31,13 +33,14 @@ class App {
 		if (!this.click) {
 			if (inputArr.tipeDriver && inputArr.date && inputArr.jam) {
 				this.exec(inputArr);
-				console.log();
-				if (!this.check.firstElementChild) {
-					return alert("Data kosong");
-				}
-
+				// console.log();
+				!this.check.firstElementChild
+					? (this.notFoundText.style.display = "block")
+					: (this.notFoundText.style.display = "none");
+					
 				this.click = true;
 				this.clearButton.style.display = "flex";
+				console.log("SSSSSSss");
 			} else {
 				return alert("Data tidak boleh kosong!");
 			}
@@ -61,18 +64,18 @@ class App {
 
 			if (
 				(car.capacity == false || car.capacity >= arr.penumpang) &&
-				inputDateTime >= carDate
+				inputDateTime >= carDate &&
+				car.available === true
 			) {
 				const node = document.createElement("div");
 				node.className = "col-md-4 mb-3";
 				node.innerHTML = car.render();
 				this.carContainerElement.appendChild(node);
-				/** 
+				/**
 				 * check time
 				 * console.info(
-				 	`${car.manufacture}-${car.model}\ninputDate: ${inputDateTime}\ncarDate: ${carDate}`
-				);
-				*/
+					`${car.manufacture}-${car.model}\ninputDate: ${inputDateTime}\ncarDate: ${carDate} \navailable: ${car.available}`);
+				 */
 			}
 		});
 	};
@@ -91,5 +94,7 @@ class App {
 		}
 		this.click = false;
 		this.clearButton.style.display = "none";
+		this.notFoundText.style.display = "none";
+		this.formElement.reset();
 	};
 }

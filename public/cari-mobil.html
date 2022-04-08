@@ -103,7 +103,7 @@
         <section class="form-section">
             <div class="container">
                 <div class="form-container mx-auto">
-                    <form>
+                    <form id="form">
                         <div class="form-row row-cols-5 justify-content-between">
                             <!-- Tipe Driver -->
                             <div class="col mb-3">
@@ -163,7 +163,8 @@
                             <!-- End Penumpang -->
 
                             <div class="col-2 mb-3 d-flex align-items-end">
-                                <button id="load-btn" class="main__button font-weight-bold border-0 btn btn-success" type="button">
+                                <button id="load-btn" class="main__button font-weight-bold border-0 btn btn-success"
+                                    type="button">
                                     Cari Mobil
                                 </button>
                                 <a id="clear-btn" class="mx-auto">
@@ -180,10 +181,16 @@
         <!-- Cars Container -->
         <section class="cars-container mt-4">
             <div class="container">
+                <div id="not-found" style="margin-top: 100px;" class="text-center">
+                    <p class="text-black-50">
+                        Data tidak ditemukan :(
+                    </p>
+                </div>
+
                 <!-- <button id="load-btn">Load</button> -->
                 <!-- <button id="clear-btn">Clear</button> -->
                 <div class="row">
-                
+
                 </div>
             </div>
         </section>
