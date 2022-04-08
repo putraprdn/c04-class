@@ -40,7 +40,6 @@ class Car {
 	}
 
 	render() {
-		let nol;
 		const newRentPerDay =
 			this.rentPerDay >= 1000000
 				? `${this.rentPerDay / 1000000}.000.000`
