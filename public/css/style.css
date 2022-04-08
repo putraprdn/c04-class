@@ -339,6 +339,7 @@ header {
 	border-radius: 8px;
 	padding: 31px 17px;
 	border: none;
+	/* height: 530px; */
 }
 .cars-container .card > img {
 	width: 270px;
@@ -349,6 +350,9 @@ header {
 .cars-container .card-info p {
 	font-size: 14px;
 	line-height: 20px;
+}
+.cars-container .card-desc {
+	height: 60px;
 }
 .cars-container .card-harga {
 	font-size: 16px;
@@ -361,7 +365,6 @@ header {
 .cars-container #not-found {
 	display: none;
 }
-
 
 .footer {
 	margin-top: 150px;

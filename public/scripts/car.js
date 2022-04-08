@@ -40,17 +40,19 @@ class Car {
 	}
 
 	render() {
-    let nol;
-    const newRentPerDay = this.rentPerDay >= 1000000 ? `${this.rentPerDay / 1000000}.000.000` : `${this.rentPerDay / 1000}.000`;
-    return `
+		let nol;
+		const newRentPerDay =
+			this.rentPerDay >= 1000000
+				? `${this.rentPerDay / 1000000}.000.000`
+				: `${this.rentPerDay / 1000}.000`;
+		return `
         <div class="card">
             <img src="${this.image}" class="card-img" alt="Car Image">
             <div class="card-body p-0">
-                <h5 class="card-title mt-3 mb-1">${this.manufacture} - ${this.model}</h5>
+                <h5 class="card-title mt-3 mb-1">${this.manufacture} - ${this.model} <span class="text-black-50 ml-1" style="font-size: 12px;">${this.type}</span></h5>
                 <p class="card-harga mb-1">Rp. ${newRentPerDay} / hari</p>
                 <p class="card-desc font-weight-light mb-1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.
+                    ${this.description}
                 </p>
                 <div class="card-info mt-3">
                     <div class="info">

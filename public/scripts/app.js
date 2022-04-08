@@ -40,7 +40,6 @@ class App {
 					
 				this.click = true;
 				this.clearButton.style.display = "flex";
-				console.log("SSSSSSss");
 			} else {
 				return alert("Data tidak boleh kosong!");
 			}
